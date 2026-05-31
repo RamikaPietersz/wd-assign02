@@ -15,8 +15,8 @@ Key Features Implemented:
 - BONUS: A dedicated Estimated Bill Calculator page.
 
 Deployment:
-- The website has been successfully tested locally and deployed on the Mercury server at: [Insert your Mercury server URL here]
-- GitHub Repository: [Insert your GitHub URL here]
+- The website has been successfully tested locally and deployed on the Mercury server at: https://mercury.swin.edu.au/cos10005/s106225139/Wd_assign2_106225139/index.html
+- GitHub Repository: https://ramikapietersz.github.io/wd-assign02/
 
 Instructions for marker:
 1. Open index.html to view the home page.
