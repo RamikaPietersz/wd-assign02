@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants | Melbourne Bites</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Melbourne Bites</h1>
+        <nav>
+            <!-- Navigation menu -->
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="calculator.html">Bill Calculator</a>
+            
+        </nav>
+    </header>
+    <main>
+        <h2>Featured Restaurants</h2>
+        <!-- Grid container holding all restaurant cards -->
+        <div class="restaurant-grid">
+            
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/sunrise.jpg" alt="Smashed avocado and breakfast spreads on wooden table" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+               
+                <!-- Restaurant name -->
+                <h3>The Sunrise Plate</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Breakfast & Brunch</p>
+                <p><strong>Average Price:</strong> $30 per person</p>
+                <p><strong>Deposit Amount:</strong> $10.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Smashed Avocado on Sourdough - $18.50</li>
+                    <li>Classic Eggs Benedict - $22.00</li>
+                </ul>
+
+                <!-- Description -->
+                <p><strong>Description:</strong> Welcome to The Sunrise Plate, located right in the vibrant heart of the Melbourne CBD. We specialize in serving classic, hearty breakfast options designed to start your day perfectly. Our beautiful space offers a warm, welcoming atmosphere ideal for morning business meetings or relaxed family gatherings. Every dish is crafted using fresh, locally sourced Victorian ingredients.</p>
+                <a href="reservation.html?restaurant=sunrise" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/yarra.jpg" alt="Premium steak and fine wine setup" style="width: 100%; height: 180px; object-fit: fill; border-radius: 8px; margin-bottom: 15px;">
+                
+                <!-- Restaurant name -->
+                <h3>Yarra Fine Dining</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Modern Australian</p>
+                <p><strong>Average Price:</strong> $95 per person</p>
+                <p><strong>Deposit Amount:</strong> $25.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Pan-Seared Duck Breast - $45.00</li>
+                    <li>MBS4+ Wagyu Beef Sirloin - $55.00</li>
+                </ul>
+                <!-- Description -->
+                <p><strong>Description:</strong> Yarra Fine Dining offers an exceptional premium culinary experience directly overlooking the scenic Yarra River in Southbank. Our establishment focuses on delivering contemporary Australian cuisine paired with world-class local wines. Featuring sophisticated decor and spectacular panoramic city views, it represents the ideal romantic backdrop for couples celebrating special milestones or professionals hosting upscale corporate dinners.</p>
+                <a href="reservation.html?restaurant=yarra" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/lygon.jpg" alt="Traditional Italian thin crust pizza fresh out of woodfired oven" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <!-- Restaurant name -->
+                <h3>Lygon Pizza Co.</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Italian</p>
+                <p><strong>Average Price:</strong> $38 per person</p>
+                <p><strong>Deposit Amount:</strong> $15.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Margherita Verace Pizza - $24.00</li>
+                    <li>Homemade Fettuccine Carbonara - $26.50</li>
+                </ul>
+                <!-- Description -->
+                <p><strong>Description:</strong> Situated in Carlton's iconic Little Italy district, Lygon Pizza Co. brings the authentic flavors of traditional wood-fired pizza directly to your table. Our family-owned restaurant prides itself on utilizing heritage recipes passed down through generations. Enjoy hand-stretched sourdough bases, vibrant homemade tomato sauces, and fresh mozzarella within a lively, energetic dining room that is absolutely perfect for large family dinners.</p>
+                <a href="reservation.html?restaurant=lygon" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/fitzroy.jpg" alt="Healthy plant-based Buddha bowl featuring mixed grains and tofu" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <!-- Restaurant name -->
+                <h3>Fitzroy Vegan Kitchen</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Plant-based / Vegan</p>
+                <p><strong>Average Price:</strong> $32 per person</p>
+                <p><strong>Deposit Amount:</strong> $12.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Truffle Mushroom Risotto - $28.00</li>
+                    <li>Crispy Tofu Buddha Bowl - $22.50</li>
+                </ul>
+                <!-- Description -->
+                <p><strong>Description:</strong> Nestled in the trendy streets of Fitzroy, our kitchen redefines modern plant-based dining with creative and innovative flavor combinations. We present an entirely vegan menu that satisfies both dedicated vegans and curious food enthusiasts alike. The cozy, bohemian-styled interior provides a highly relaxed atmosphere perfect for casual catch-ups, university students, and green-living advocates looking for high-quality sustainable food.</p>
+                <a href="reservation.html?restaurant=fitzroy" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/stkilda.jpg" alt="Garnished seafood platter with beach side view background" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <!-- Restaurant name -->
+                <h3>St Kilda Seafood</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Seafood</p>
+                <p><strong>Average Price:</strong> $55 per person</p>
+                <p><strong>Deposit Amount:</strong> $20.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Catch of the Day Platter - $65.00</li>
+                    <li>Salt & Pepper Calamari - $24.00</li>
+                </ul>
+                <!-- Description -->
+                <p><strong>Description:</strong> St Kilda Seafood delivers the freshest local daily catches paired beautifully with unparalleled panoramic views of Port Phillip Bay. Positioned perfectly on the bustling foreshore, our spacious, sun-drenched restaurant provides a premium yet highly accessible dining option. It is an excellent choice for families enjoying a weekend out, tourists exploring coastal landmarks, or couples seeking a relaxed seaside dinner experience.</p>
+                <a href="reservation.html?restaurant=stkilda" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+            <!-- Individual restaurant card -->
+            <article class="restaurant-card">
+                <img src="images/chinatown.jpg" alt="Steaming bamboo baskets containing freshly prepared pork soup dumplings" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                <!-- Restaurant name -->
+                <h3>Chinatown Dumplings</h3>
+                <!-- Key details -->
+                <p><strong>Cuisine Type:</strong> Chinese</p>
+                <p><strong>Average Price:</strong> $28 per person</p>
+                <p><strong>Deposit Amount:</strong> $10.00 per person</p>
+                <!-- Menu highlights -->
+                <p><strong>Signature Dishes:</strong></p>
+                <ul>
+                    <li>Signature Pork Xiao Long Bao - $16.80</li>
+                    <li>Spicy Hand-Pulled Beef Noodles - $19.50</li>
+                </ul>
+                <!-- Description -->
+                <p><strong>Description:</strong> Located within Melbourne's historic Chinatown precinct in the CBD, this vibrant late-night hotspot is renowned for serving the finest, most authentic handmade soup dumplings in town. Watch our master chefs stretch dough through our open kitchen viewing screen. Offering quick service, incredible value, and large portions, it stands out as a top favorite destination for busy city professionals, hungry students, and late-night explorers.</p>
+                <a href="reservation.html?restaurant=chinatown" class="book-now-btn">Book This Restaurant</a>
+            </article>
+
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

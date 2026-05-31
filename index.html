@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Bites | Discover & Dine</title>
+    
+    <!-- Link to external CSS stylesheet -->    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Melbourne Bites</h1>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="calculator.html">Bill Calculator</a>
+            
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1 headingoffset="0">Experience Melbourne's Culinary Soul</h1>
+            <p>From hidden laneway gems to upscale riverside dining. Your next unforgettable meal is just a click away.</p>
+            <!-- Call-to-action buttons -->
+            <div class="hero-actions">
+                <a href="restaurants.html" class="btn-primary">Browse Restaurants</a>
+                <a href="recommend.html" class="btn-secondary">Get Personalized Vibe</a>
+            </div>
+        </section>
+
+        <!-- Image gallery section -->
+        <section style="text-align: center; margin: 20px 0;">
+            <h2>Discover Melbourne's Vibrant Dining Scene</h2>
+            <img src="images/homeimage.jpeg" alt="Lively dining atmosphere inside a Melbourne restaurant" style="max-width: 350px; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <img src="images/homeimage1.jpeg" alt="Lively dining atmosphere inside a Melbourne restaurant" style="max-width: 400px; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <img src="images/homeimage2.jpeg" alt="Lively dining atmosphere inside a Melbourne restaurant" style="max-width: 400px; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        </section>
+
+        <!-- Features section highlighting key benefits -->
+        <section class="features">
+            <h2>Why Choose Melbourne Bites?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Curated Discovery</h3>
+                    <p>Expertly selected dining spots mapped by neighborhood and cuisine.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Smart Matching</h3>
+                    <p>Our intelligent engine suggests venues based on your specific mood and schedule.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Seamless Booking</h3>
+                    <p>Instant reservation tools with transparent deposit calculations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="audience">
+            <h3>Designed for Every Occasion</h3>
+            <p>We believe every dining experience should be perfect. Our platform is meticulously crafted to assist you, no matter the purpose of your gathering:</p>
+            
+            <div class="occasion-grid">
+                <div class="occasion-item">
+                    <h4>Corporate & Professional</h4>
+                    <p>From high-stakes business luncheons to team-building dinners, find venues that offer the right atmosphere and professional service you need.</p>
+                </div>
+                <div class="occasion-item">
+                    <h4>Romantic Evenings</h4>
+                    <p>Discover intimate spots with panoramic views or cozy, quiet corners, perfect for anniversaries, dates, or special milestones.</p>
+                </div>
+                <div class="occasion-item">
+                    <h4>Family & Friends</h4>
+                    <p>Whether it's a lively weekend brunch or a large group dinner, we help you find spacious, welcoming environments that cater to all ages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-book">
+            <h3>Ready to Book?</h3>
+            <!-- Links to reservation page with query parameters -->
+            <div class="quick-book-grid">
+                <a href="reservation.html?restaurant=sunrise">The Sunrise Plate</a>
+                <a href="reservation.html?restaurant=yarra">Yarra Fine Dining</a>
+                <a href="reservation.html?restaurant=lygon">Lygon Pizza Co.</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve | Melbourne Bites</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Melbourne Bites</h1>
+        <nav>
+            <!-- Navigation menu -->
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="calculator.html">Bill Calculator</a>
+            
+        </nav>
+    </header>
+    <main>
+        <h2>Table Reservation System</h2>
+        
+        <!-- Reservation form with POST method -->
+        <form id="reservationForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+            <!-- Error message box for validation -->
+            <div id="resErrorBox" class="error-box">
+                <strong>Please fix the highlighted reservation requirements:</strong>
+                <!-- List to display validation errors -->
+                <ul id="resErrorList"></ul>
+            </div>
+
+            <div class="form-group">
+                <label for="resName">Full Name</label>
+                <input type="text" name="fullname" id="resName">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="resEmail">Email Address</label>
+                    <input type="email" name="email" id="resEmail">
+                </div>
+                <div class="form-group">
+                    <label for="resPhone">Phone Number</label>
+                    <input type="tel" name="phone" id="resPhone" placeholder="Min 10 digits">
+                </div>
+            </div>
+
+            <!-- Restaurant selection dropdown -->
+            <div class="form-group">
+                <label for="restaurantSelect">Select Restaurant</label>
+                <select name="restaurant" id="restaurantSelect">
+                    <option value="">-- Please choose an option --</option>
+                    <!-- Restaurant options with deposit details -->
+                    <option value="sunrise">The Sunrise Plate (CBD) - $10.00 deposit/head</option>
+                    <option value="yarra">Yarra Fine Dining (Southbank) - $25.00 deposit/head</option>
+                    <option value="lygon">Lygon Pizza Co. (Carlton) - $15.00 deposit/head</option>
+                    <option value="fitzroy">Fitzroy Vegan Kitchen (Fitzroy) - $12.00 deposit/head</option>
+                    <option value="stkilda">St Kilda Seafood (St Kilda) - $20.00 deposit/head</option>
+                    <option value="chinatown">Chinatown Dumplings (CBD) - $10.00 deposit/head</option>
+                </select>
+            </div>
+
+            <!-- Date and time row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="resDate">Reservation Date</label>
+                    <input type="date" name="date" id="resDate">
+                </div>
+
+                <!-- Time input -->
+                <div class="form-group">
+                    <label for="resTime">Reservation Time</label>
+                    <input type="time" name="time" id="resTime">
+                </div>
+            </div>
+
+            <!-- Number of guests -->
+            <div class="form-group">
+                <label for="resGuests">Number of Guests</label>
+                <input type="number" name="guests" id="resGuests" min="1" value="1">
+            </div>
+
+            <!-- Special request textarea -->
+            <div class="form-group">
+                <label for="resRequest">Special Requests (Optional)</label>
+                <textarea name="requests" id="resRequest" rows="3" placeholder="Dietary notes, highchairs, etc."></textarea>
+            </div>
+            
+            <!-- Section showing calculated deposit -->
+            <div class="form-group" style="background:#e9ecef; padding:1rem; border-radius:4px; font-size:1.1rem;">
+                <p><strong>Computed Deposit (per head): </strong> <span id="perHeadDisplay">$0.00</span></p>
+                <p><strong>Total Security Balance Due: </strong> <span id="totalDepositDisplay" style="color:var(--accent-orange); font-weight:bold;">$0.00</span></p>
+            </div>
+
+            <!-- Payment method selection -->
+            <div class="form-group">
+                <label for="paymentMethod">Deposit Funding Method</label>
+                <select name="payment_method" id="paymentMethod">
+                    <option value="none">-- Select Payment Method --</option>
+                    <option value="Online">Online Credit Card Payment</option>
+                    <option value="Voucher">Prepaid Business Voucher</option>
+                </select>
+            </div>
+
+            <!-- Voucher input section (hidden by default) -->
+            <div id="voucherSection" class="conditional-field" style="display:none;">
+                <label for="voucherCode">12-Digit Voucher Code</label>
+                <input type="text" name="voucher_code" id="voucherCode"
+                    placeholder="Enter exactly 12 numeric digits" maxlength="12">
+            </div>
+
+                <!-- Card details section (hidden by default) -->
+            <div id="cardSection" style="display:none;">
+                <label>Select Card Type:</label>
+                <div class="radio-group">
+
+                    <!-- Visa/MasterCard option -->
+                    <input type="radio" name="cardType" value="visa" id="visaRadio"> 
+                    <label for="visaRadio">Visa/MC</label>
+
+                    <!-- American Express option -->                    
+                    <input type="radio" name="cardType" value="amex" id="amexRadio"> 
+                    <label for="amexRadio">Amex</label>
+                </div>
+                
+                <!-- Card number input -->
+                <input type="text" id="cardNum" placeholder="Insert card number">
+            </div>
+
+            <!-- Checkbox to sync billing email -->
+            <div class="form-group" style="margin-top:1.5rem;">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="sameAsEmail"> Sync billing email with main contact email address</label>
+                </div>
+            </div>
+
+            <!-- Billing email input -->
+            <div class="form-group">
+                <label for="billingEmail">Billing Email Address</label>
+                <input type="email" name="billing_email" id="billingEmail">
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Confirm Secure Booking</button>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

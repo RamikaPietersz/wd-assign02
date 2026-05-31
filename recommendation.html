@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations | Melbourne Bites</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Melbourne Bites</h1>
+        <nav>
+            <!-- Navigation menu -->
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="calculator.html">Bill Calculator</a>
+            
+        </nav>
+    </header>
+    <main>
+
+        <!-- Page heading and description -->
+        <h2>Table Reservation System</h2>
+        <p>Fill out the form below to reserve a table at your preferred restaurant.</p>
+
+        <!-- Form used to collect user preferences -->
+        <form id="reservationForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+            <!-- Error display area for validation feedback -->
+            <div id="resErrorBox" class="error-box">
+                <strong>Please fix the highlighted reservation requirements:</strong>
+                <ul id="resErrorList"></ul>
+            </div>
+
+            <!-- Dietary preference selection -->
+            <div class="form-group">
+                <label for="dietPref">Dietary Preferences</label>
+                <select id="dietPref">
+                    <option value="None">None (No Restrictions)</option>
+                    <option value="Vegan">Vegan (Strictly Plant-Based)</option>
+                    <option value="Halal">Halal Friendly</option>
+                </select>
+            </div>
+
+            <!-- Budget selection -->
+            <div class="form-group">
+                <label for="budgetRange">Budget per Person</label>
+                <select id="budgetRange">
+                    <option value="low">Budget Friendly (Under $35)</option>
+                    <option value="mid">Moderate Dining ($35 - $60)</option>
+                    <option value="high">Premium / Fine Dining ($60+)</option>
+                </select>
+            </div>
+
+            <!-- Purpose of dining -->
+            <div class="form-group">
+                <label for="diningPurpose">Dining Purpose</label>
+                <select id="diningPurpose">
+                    <option value="Family">Family Gathering</option>
+                    <option value="Date">Romantic Date Night</option>
+                    <option value="Business">Business / Professional Luncheon</option>
+                </select>
+            </div>
+
+            <!-- Button that triggers recommendation logic (JavaScript) -->
+            <button type="button" id="getRecommendationBtn">Get Recommendation</button>
+        </form>
+
+        <!-- Output box where recommendation result is displayed -->
+        <div id="recommendationResultBox" style="display:none; margin: 2rem auto; max-width: 700px; padding: 1.5rem; background: #fff; border-left: 5px solid var(--accent-orange); border-radius: 4px; box-shadow: var(--shadow-medium); text-align: center;">
+            <h3 id="recTitle" style="margin-bottom: 10px; color: var(--primary-navy);">Your Restaurant Recommendation:</h3>
+            <p id="recText" style="margin-bottom: 15px;"></p>
+            <a id="recLink" href="#" style="display: inline-block; background: var(--accent-orange); color:#fff; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px;">Select and Book Now</a>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

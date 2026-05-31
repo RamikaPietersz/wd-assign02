@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator | Melbourne Bites</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <h1>Melbourne Bites</h1>
+    <nav>
+        <!-- Navigation menu -->
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="recommendation.html">Recommendations</a>
+        <a href="register.html">Register</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="calculator.html">Bill Calculator</a>
+        
+    </nav>
+    </header>
+    <main>
+        <h2>Estimated Bill Calculator (Bonus)</h2>
+        <!-- Form for bill calculation -->
+        <form id="calcForm">
+
+            <!-- Subtotal input field -->
+            <div class="form-group">
+                <label for="subtotal">Expected Subtotal ($)</label>
+                <input type="number" id="subtotal" min="0" step="1" required>
+            </div>
+
+            <!-- Tip percentage slider -->
+            <div class="form-group">
+                <label for="tip">Tip Percentage (%)</label>
+                <input type="range" id="tip" min="0" max="30" value="0">
+                <!-- Displays selected tip value -->
+                <span id="tipVal">0%</span>
+            </div>
+            <p id="calcResult" style="margin-top: 15px; font-weight: bold; font-size: 1.2rem;"></p>
+        </form>
+    </main>
+
+    <!-- Link to JavaScript file for calculator functionality -->
+    <script src="js/script.js"></script>
+</body>
+</html>

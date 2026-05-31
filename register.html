@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Ramika Pietersz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Melbourne Bites</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Melbourne Bites</h1>
+        <nav>
+            <!-- Navigation menu -->
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="recommendation.html">Recommendations</a>
+            <a href="register.html">Register</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="calculator.html">Bill Calculator</a>
+            
+        </nav>
+    </header>
+    <main>
+        <h2>Create an Account</h2>
+        
+        <!-- Registration form (submitted using POST method) -->
+        <form id="registerForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+            <!-- Error display area for validation messages -->
+            <div id="regErrorBox" class="error-box">
+                <strong>Please resolve the following entry violations:</strong>
+                <ul id="regErrorList"></ul>
+            </div>
+            
+            <!-- Username input -->
+            <div class="form-group">
+                <label for="regUser">Username</label>
+                <input type="text" name="username" id="regUser" placeholder="Min 5 characters, letters/numbers/underscores">
+            </div>
+
+            <!-- Email input -->
+            <div class="form-group">
+                <label for="regEmail">Email Address</label>
+                <input type="email" name="email" id="regEmail" placeholder="example@domain.com">
+            </div>
+
+            <!-- Phone number input -->
+            <div class="form-group">
+                <label for="regPhone">Phone Number</label>
+                <input type="tel" name="phone" id="regPhone" placeholder="8 to 15 digits only">
+            </div>
+
+            <!-- Password and confirmation fields-->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="regPwd">Password</label>
+                    <input type="password" name="password" id="regPwd" placeholder="Min 10 chars (incl. Upper, Lower, Num, Special)">
+                </div>
+                <div class="form-group">
+                    <label for="regConfirm">Confirm Password</label>
+                    <input type="password" id="regConfirm" placeholder="Repeat chosen password">
+                </div>
+            </div>
+
+             <!-- Gender selection (radio buttons) -->
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" id="genderM"> Male</label>
+                    <label><input type="radio" name="gender" value="Female" id="genderF"> Female</label>
+                </div>
+            </div>
+
+            <!-- Dietary preference dropdown -->
+            <div class="form-group">
+                <label for="regDiet">Dietary Preferences</label>
+                <select name="dietary" id="regDiet">
+                    <option value="">-- Choose Preference --</option>
+                    <option value="None">None</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Halal">Halal</option>
+                </select>
+            </div>
+
+            <!-- Country / Region dropdown -->
+            <div class="form-group">
+                <label for="regCountry">Country / Region</label>
+                <select name="country" id="regCountry">
+                    <option value="">-- Select Location --</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Submit Registration</button>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
